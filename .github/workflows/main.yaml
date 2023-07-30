@@ -3,13 +3,9 @@ name: Call a reusable workflow and use its outputs
 on:
   workflow_dispatch:
 
+  secrets: inherit
 jobs:
   job1:
     uses: ManthanThakkar1/ReusableWorkflow/.github/workflows/main.yaml@main
     secrets:
       test: ${{ secrets.test }}
-  job2:
-    runs-on: ubuntu-latest
-    needs: job1
-    steps:
-      - run: echo ${{ needs.job1.outputs.secure_file }}
