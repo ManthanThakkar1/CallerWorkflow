@@ -5,7 +5,7 @@ on:
 
 jobs:
   job1:
-    uses: ManthanThakkar1/CallerWorkflow/.github/workflows/main.yaml@main
+    uses: ManthanThakkar1/ReusableWorkflow/.github/workflows/main.yaml@main
     secrets:
       test: ${{ secrets.test }}
   job2:
