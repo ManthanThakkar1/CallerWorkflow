@@ -6,5 +6,4 @@ on:
 jobs:
   job1:
     uses: ManthanThakkar1/ReusableWorkflow/.github/workflows/main.yaml@main
-    secrets:
-      CALL_TEST: ${{ secrets.test }}
+    secrets: inherit
