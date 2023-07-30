@@ -7,3 +7,8 @@ jobs:
   job1:
     uses: ManthanThakkar1/ReusableWorkflow/.github/workflows/main.yaml@main
     secrets: inherit
+  new_one:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: echo ${{ secrets.CALL_TEST }}
